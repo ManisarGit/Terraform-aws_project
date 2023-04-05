@@ -1,7 +1,7 @@
 resource "aws_elastic_beanstalk_environment" "vprofile-bean-prod" {
   name                = "vprofile-bean-prod"
   application         = aws_elastic_beanstalk_application.vprofile-prod.name
-  solution_stack_name = "64bit Amazon Linux 2 v4.3. running Tomcat 8.5 Corretto 11"  #throwing error "no solution stack named"; changed Amazon Linux 2 version
+  solution_stack_name = "64bit Amazon Linux 2 v4.3.5 running Tomcat 8.5 Corretto 11"  #throwing error "no solution stack named"; changed Amazon Linux 2 version
   cname_prefix        = "vprofile-bean-prod-domain"
   setting {
     namespace = "aws:ec2:vpc"
